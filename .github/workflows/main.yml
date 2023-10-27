@@ -17,7 +17,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./Techchallenge3-Terraform-EKS/
+        working-directory: .
     steps:
       - name: Git checkout
         uses: actions/checkout@v3

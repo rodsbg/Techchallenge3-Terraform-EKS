@@ -17,7 +17,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: .
+        working-directory: ./Techchallenge3-Terraform-EKS/
     steps:
       - name: Git checkout
         uses: actions/checkout@v3
@@ -34,16 +34,10 @@ jobs:
         with:
           terraform_version: 1.2.5
       
-      - name: Validate content
-        id: ls
-        run: pwd && ls -lan
-        continue-on-error: true
-
       - name: Terraform fmt
         id: fmt
         run: terraform fmt -check
         continue-on-error: true
-
 
       - name: Terraform Init
         id: init

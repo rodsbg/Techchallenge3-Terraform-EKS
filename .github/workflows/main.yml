@@ -38,6 +38,10 @@ jobs:
         id: fmt
         run: terraform fmt -check
         continue-on-error: true
+      - name: Validate content
+        id: ls
+        run: pwd && ls -lan
+        continue-on-error: true
 
       - name: Terraform Init
         id: init

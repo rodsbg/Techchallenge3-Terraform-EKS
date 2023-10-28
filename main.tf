@@ -13,8 +13,4 @@ provider "aws" {
 
 resource "aws_s3_bucket" "buckuet-tech3-fiap" {
   bucket = "trabalho-fiap-tech-challange3"
-
-  versioning {
-    enabled = true
-  }
 }
